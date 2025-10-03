@@ -1,0 +1,112 @@
+/* app/dashboard/dashboard.css */
+.dashboard-container {
+  padding: 2rem;
+  background-color: #121223;
+  min-height: 100vh;
+  color: #E0E0E0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+/* ... 검색창 등 헤더 스타일 ... */
+
+.dashboard-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 프로젝트 카드 공통 스타일 */
+.new-city-card, .project-card {
+  background-color: #1a1a2e;
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #3a3a5e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-city-card:hover, .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(112, 161, 255, 0.1);
+  border-color: #70a1ff;
+}
+
+/* 새 도시 건설 카드 특별 스타일 */
+.new-city-card {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  border-style: dashed;
+}
+
+.plus-icon {
+  font-size: 3rem;
+  color: #70a1ff;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.new-city-card h2 {
+  margin: 1rem 0 0.5rem;
+  color: #fff;
+}
+
+.new-city-card p {
+  color: #B0B0B0;
+  font-size: 0.9rem;
+}
+
+/* 기존 프로젝트 카드 스타일 */
+.card-thumbnail {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.card-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.language-tag {
+  background-color: #3a3a5e;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  color: #E0E0E0;
+}
+
+.language-tag.typescript { background-color: #007acc; }
+.language-tag.python { background-color: #3572A5; }
+.language-tag.react { background-color: #61DAFB; color: #000; }
